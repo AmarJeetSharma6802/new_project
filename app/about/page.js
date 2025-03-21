@@ -28,7 +28,7 @@ function page() {
   return (
     <div style={{ position: "relative", width: "100%", height: "695px" }}> 
 <Image 
-  src="https://ebroker.wrteam.me/assets/images/logo/web_logo.png"
+  src="https://ebroker.wrteam.me/images/slider/1739445180.4529.jpg"
   alt="Company Logo"
   style={{objectFit: "cover"}}
 />
