@@ -1,95 +1,121 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+"use client"
+import React from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import Image from 'next/image';
 
-export default function Home() {
+import Home from './home/page'
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+
+// import required modules
+import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+
+export default function App() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>app/page.tsx</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
+    <>
+      <Swiper
+        spaceBetween={30}
+        centeredSlides={true}
+        autoplay={{
+          delay: 3000,
+          disableOnInteraction: false,
+        }}
+        pagination={{
+          clickable: true,
+        }}
+        navigation={true}
+        modules={[Autoplay, Pagination, Navigation]}
+        className="mySwiper"
+      >
+        {/* Slide 1 */}
+        <SwiperSlide>
+          <div style={{ position: "relative", width: "100%", height: "695px" }}>
+            <Image 
+              src="https://ebroker.wrteam.me/images/slider/1739445133.6177.jpg" 
+              alt="Nike Banner"
+              fill
+              style={{ objectFit: "cover" }}
             />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+            {/* Black Overlay */}
+            <div style={{
+              position: "absolute",
+              top: 0,
+              left: 0,
+              width: "100%",
+              height: "100%",
+              background: "rgba(0, 0, 0, 0.5)", 
+            }} />
+          </div>
+        </SwiperSlide>
+
+        {/* Slide 2 */}
+        <SwiperSlide>
+          <div style={{ position: "relative", width: "100%", height: "695px" }}>
+            <Image 
+              src="https://ebroker.wrteam.me/images/slider/1739445180.4529.jpg" 
+              alt="Nike Banner"
+              fill
+              style={{ objectFit: "cover" }}
+            />
+            {/* Black Overlay */}
+            <div style={{
+              position: "absolute",
+              top: 0,
+              left: 0,
+              width: "100%",
+              height: "100%",
+              background: "rgba(0, 0, 0, 0.5)", 
+            }} />
+          </div>
+        </SwiperSlide>
+
+        {/* Slide 3 */}
+        <SwiperSlide>
+          <div style={{ position: "relative", width: "100%", height: "695px" }}>
+            <Image 
+              src="https://ebroker.wrteam.me/images/slider/1739445180.4529.jpg" 
+              alt="Nike Banner"
+              fill
+              style={{ objectFit: "cover" }}
+            />
+            {/* Black Overlay */}
+            <div style={{
+              position: "absolute",
+              top: 0,
+              left: 0,
+              width: "100%",
+              height: "100%",
+              background: "rgba(0, 0, 0, 0.5)", 
+            }} />
+          </div>
+        </SwiperSlide>
+
+        {/* Slide 4 */}
+        <SwiperSlide>
+          <div style={{ position: "relative", width: "100%", height: "695px" }}>
+            <Image 
+              src="https://ebroker.wrteam.me/images/slider/1739445408.5142.png" 
+              alt="Nike Banner"
+              fill
+              style={{ objectFit: "cover" }}
+            />
+            {/* Black Overlay */}
+            <div style={{
+              position: "absolute",
+              top: 0,
+              left: 0,
+              width: "100%",
+              height: "100%",
+              background: "rgba(0, 0, 0, 0.5)", 
+            }} />
+          </div>
+        </SwiperSlide>
+      </Swiper>
+
+      <div className="page2"></div>
+      <Home/>
+    </>
   );
 }

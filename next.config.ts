@@ -1,7 +1,10 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  reactStrictMode: true,
+  images: {
+    domains: ['static.nike.com', 'google.com', 'localhost', 'ebroker.wrteam.me'], // ✅ Domain Add Kiya
+  },
 };
 
 export default nextConfig;
