@@ -64,7 +64,11 @@ setNavbar(true)
   const handleClose =()=>{
 setNavbar(false)
   }
+  const navClose =()=>{
+    handleClose()
+  }
   
+
 
 
   return (
@@ -78,29 +82,29 @@ setNavbar(false)
         <ul className={styles.ul}>
         <div onClick={handleClose} className={styles.close}><i className="fa-solid fa-xmark"></i></div>
 
-        <Link href={"/"} className={Pathname === "/" ? styles.activeLink : ""}><li className={styles.li}>Home</li></Link>
+        <Link href={"/"} className={Pathname === "/" ? styles.activeLink : ""}><li className={styles.li} onClick={navClose}>Home</li></Link>
           <li onClick={handlePeropertyToggle} className={styles.li}>Properties  <span className={styles.arrow}>{arrow ? <i className="fa-solid fa-caret-up"></i>  :  <i className="fa-solid fa-caret-down" ></i>}</span>
           <ul className={styles.innerProperty} ref={refPeroperty}>
-            <li className={styles.innerPropertyLi}>All Property</li>
-            <li className={styles.innerPropertyLi}>Featured Property</li>
-            <li className={styles.innerPropertyLi}>Most Viewd Property</li>
-            <li className={styles.innerPropertyLi}>Nearby Cities Properties</li>
-            <li className={styles.innerPropertyLi}>Most Favorite Properties</li>
+            <li className={styles.innerPropertyLi} onClick={navClose}>All Property</li>
+            <li className={styles.innerPropertyLi} onClick={navClose}>Featured Property</li>
+            <li className={styles.innerPropertyLi} onClick={navClose}>Most Viewd Property</li>
+            <li className={styles.innerPropertyLi}onClick={navClose}>Nearby Cities Properties</li>
+            <li className={styles.innerPropertyLi} onClick={navClose}>Most Favorite Properties</li>
           </ul>
           </li>
           <li onClick={handlePageToggle} className={styles.li}>Pages <span className={styles.arrow}>{Pagearrow ?<i className="fa-solid fa-caret-up"></i>:  <i className="fa-solid fa-caret-down" ></i> }</span>
             <ul className={styles.innerPages} ref={refPage}>
-              <li className={styles.innerPagesLi}>Subscription Plan</li>
-              <li className={styles.innerPagesLi}>Articles</li>
-              <li className={styles.innerPagesLi}>FAQs</li>
-              <li className={styles.innerPagesLi}>Area Converter</li>
-              <li className={styles.innerPagesLi}>Terms & Condition</li>
-              <li className={styles.innerPagesLi}>Privacy Policy</li>
+              <li className={styles.innerPagesLi} onClick={navClose}>Subscription Plan</li>
+              <li className={styles.innerPagesLi} onClick={navClose}>Articles</li>
+              <li className={styles.innerPagesLi} onClick={navClose}>FAQs</li>
+              <li className={styles.innerPagesLi} onClick={navClose}>Area Converter</li>
+              <li className={styles.innerPagesLi} onClick={navClose}>Terms & Condition</li>
+              <li className={styles.innerPagesLi} onClick={navClose}>Privacy Policy</li>
             </ul>
           </li>
         
-        <Link href="/about" className={Pathname === "/about" ? styles.activeLink : ""}><li className={styles.li}>About Us</li></Link>
-          <li className={styles.li}>Contact</li>
+        <Link href="/about" className={Pathname === "/about" ? styles.activeLink : ""}><li className={styles.li} onClick={navClose}>About Us</li></Link>
+          <li className={styles.li} onClick={navClose}>Contact</li>
         </ul>
       </nav>
       <div className={styles.loginNavbar}>
