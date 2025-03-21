@@ -1,4 +1,5 @@
-import { Metadata } from 'next';
+import Image from 'next/image';
+
 export const metadata = {
   title: 'About Us - My Company Name', 
   description: 'Learn more about us, our values, and what we do.',
@@ -25,7 +26,13 @@ export const metadata = {
 
 function page() {
   return (
-    <div ><img style={{width:"100%" ,minHeight:"150vh"}} src='https://ebroker.wrteam.me/images/slider/1739445133.6177.jpg'/></div>
+    <div style={{ position: "relative", width: "100%", height: "695px" }}> 
+<Image 
+  src="https://ebroker.wrteam.me/assets/images/logo/web_logo.png"
+  alt="Company Logo"
+  style={{objectFit: "cover"}}
+/>
+    </div>
   )
 }
 
