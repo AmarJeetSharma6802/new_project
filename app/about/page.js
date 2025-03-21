@@ -28,8 +28,9 @@ function page() {
   return (
     <div style={{ position: "relative", width: "100%", height: "695px" }}> 
 <Image 
-  src="https://ebroker.wrteam.me/images/slider/1739445180.4529.jpg"
+  src="https://ebroker.wrteam.me/images/slider/1739445133.6177.jpg"
   alt="Company Logo"
+  fill
   style={{objectFit: "cover"}}
 />
     </div>
